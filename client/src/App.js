@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import Navbar from "./components/navbar/Navbar";
 import { Route, Switch } from "react-router-dom";
 import Landing from "./components/landing/Landing";
+import "./App.module.scss";
 
 const App = () => {
   return (

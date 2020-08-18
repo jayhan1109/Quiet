@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./Landing.module.scss";
 const Landing = () => {
   return (
-    <div>
-      <h1>Landing Body</h1>
+    <div className={styles.container}>
+      <div className={styles.jumbotron}></div>
     </div>
   );
 };
