@@ -6,8 +6,20 @@ const Landing = () => {
     <div className={styles.container}>
       <Navbar />
       <div className={styles.jumbotron}>
-        <div>Quiet</div>
-        <div>form</div>
+        <div className={styles.title}>Quiet</div>
+        <form className={styles.form}>
+          <input
+            type="text"
+            className={styles.search}
+            placeholder="Quiet places..."
+          />
+          <input
+            type="text"
+            className={styles.search}
+            placeholder="Location..."
+          />
+          <input type="submit" value="Search" className={styles.submit} />
+        </form>
       </div>
     </div>
   );

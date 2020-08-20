@@ -1,5 +1,60 @@
+@import "../../global.scss";
+
 .jumbotron {
   height: 80vh;
   background: linear-gradient(rgba(77, 77, 77, 0.4), rgba(77, 77, 77, 0.4)),
     url("../../assets/img/landing_bg.png") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    font-size: 10vw;
+    font-weight: 900;
+    color: $white-color;
+    margin-top: -5rem;
+  }
+
+  .form {
+    .search {
+      width: 30vw;
+      outline: none;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border: none;
+      padding: 0.7rem 0.5rem 0.7rem 1.7rem;
+      background: $white-color;
+      position: relative;
+      margin-top: 3rem;
+
+      &:nth-child(2) {
+        transform: translateX(-5px);
+        border-left: 2px solid #666;
+      }
+
+      &::placeholder {
+        color: #999;
+      }
+
+      &::after {
+        content: "\f002";
+        font-size: 2rem;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+      }
+    }
+    .submit {
+      color: $black-color;
+      text-decoration: none;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.3rem;
+      font-weight: bold;
+      background-color: $white-color;
+      padding: 0.6rem 1rem;
+      transform: translateX(-3px);
+    }
+  }
 }
