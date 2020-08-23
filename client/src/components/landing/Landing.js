@@ -34,7 +34,25 @@ const Landing = () => {
       <section className={styles.category}>
         <h2 className={styles.categoryTitle}>Popular This Week</h2>
         <div className={styles.cardContainer}>
-          <div className={styles.card}>Hello</div>
+          <div className={styles.card}>
+            <div className={styles.cardImage}></div>
+            <div className={styles.cardContent}>
+              <div className={styles.cardInfo}>
+                <p className={styles.name}>La Poret</p>
+                <p className={styles.address}>4918 Hardwick, Burnaby</p>
+              </div>
+              <div className={styles.cardRating}>
+                <div className={styles.rateDiv}>
+                  <p className={styles.rateName}>QUIET</p>
+                  <div className={styles.rate}>4.2</div>
+                </div>
+                <div className={styles.rateDiv}>
+                  <p className={styles.rateName}>PRICE</p>
+                  <div className={styles.rate}>$$</div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div>World</div>
           <div>Good</div>
         </div>
