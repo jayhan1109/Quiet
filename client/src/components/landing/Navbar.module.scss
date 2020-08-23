@@ -38,13 +38,6 @@
     &::placeholder {
       color: #999;
     }
-
-    &::after {
-      content: "\f002";
-      font-size: 2rem;
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-    }
   }
 
   .signin {
@@ -56,5 +49,13 @@
     border-radius: 5px;
     padding: 0.5rem 1rem;
     font-weight: bold;
+
+    &:hover {
+      background-color: #eee;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
   }
 }
