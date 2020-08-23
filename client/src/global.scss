@@ -1,6 +1,27 @@
 $white-color: #ffffff;
 $black-color: #000000;
 
+@mixin whiteBtn {
+  color: $black-color;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: $white-color;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #eee;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
 @mixin desktop-logo {
   font-family: "Knewave";
   color: $white-color;

@@ -27,10 +27,14 @@
       background: $white-color;
       position: relative;
       margin-top: 3rem;
+      -webkit-box-shadow: 10px 10px 6px -8px rgba(0, 0, 0, 1);
+      -moz-box-shadow: 10px 10px 6px -8px rgba(0, 0, 0, 1);
+      box-shadow: 10px 10px 6px -8px rgba(0, 0, 0, 1);
 
       &:nth-child(2) {
         transform: translateX(-5px);
-        border-left: 2px solid #666;
+        border-left: 1px solid #666;
+        border-radius: 0px 3px 3px 0px;
       }
 
       &::placeholder {
@@ -38,24 +42,13 @@
       }
     }
     .submit {
-      color: $black-color;
-      text-decoration: none;
-      outline: none;
-      border: none;
-      cursor: pointer;
-      font-size: 1.3rem;
-      font-weight: bold;
-      background-color: $white-color;
-      padding: 0.6rem 1rem;
-      transform: translateX(-3px);
-
-      &:hover {
-        background-color: #eee;
-      }
-
-      &:active {
-        transform: scale(0.95);
-      }
+      @include whiteBtn();
     }
+  }
+}
+
+.category {
+  .categoryTitle {
+    font-size: 5rem;
   }
 }

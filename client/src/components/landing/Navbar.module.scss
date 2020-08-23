@@ -41,14 +41,7 @@
   }
 
   .signin {
-    color: $black-color;
-    text-decoration: none;
-    outline: none;
-    font-size: 1.3rem;
-    background-color: $white-color;
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
-    font-weight: bold;
+    @include whiteBtn();
 
     &:hover {
       background-color: #eee;

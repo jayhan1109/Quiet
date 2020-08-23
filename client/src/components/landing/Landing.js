@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import styles from "./Landing.module.scss";
 import Navbar from "./Navbar";
-import Category from "../category/Category";
 const Landing = () => {
   return (
     <div className={styles.container}>
@@ -25,12 +24,7 @@ const Landing = () => {
         </form>
       </section>
       <section className={styles.category}>
-        <Fragment>
-          <h2 className={styles.title}>Popular This Week</h2>
-          <div className={styles.cardContainer}>
-            <div className={styles.card}>//TODO: Add Card Design</div>
-          </div>
-        </Fragment>
+        <h2 className={styles.categoryTitle}>Popular This Week</h2>
       </section>
     </div>
   );
