@@ -33,6 +33,11 @@ const Landing = () => {
       </section>
       <section className={styles.category}>
         <h2 className={styles.categoryTitle}>Popular This Week</h2>
+        <div className={styles.cardContainer}>
+          <div className={styles.card}>Hello</div>
+          <div>World</div>
+          <div>Good</div>
+        </div>
       </section>
     </div>
   );
