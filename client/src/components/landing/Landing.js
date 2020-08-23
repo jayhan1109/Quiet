@@ -1,6 +1,8 @@
-import React, { Fragment } from "react";
+import React from "react";
 import styles from "./Landing.module.scss";
 import Navbar from "./Navbar";
+import cn from "classnames";
+
 const Landing = () => {
   return (
     <div className={styles.container}>
@@ -10,16 +12,22 @@ const Landing = () => {
       <section className={styles.jumbotron}>
         <div className={styles.title}>Quiet</div>
         <form className={styles.form}>
-          <input
-            type="text"
-            className={styles.search}
-            placeholder="Quiet places..."
-          />
-          <input
-            type="text"
-            className={styles.search}
-            placeholder="Location..."
-          />
+          <div className={styles.inputBox}>
+            <label>Place</label>
+            <input
+              type="text"
+              className={styles.search}
+              placeholder="Quiet places..."
+            />
+          </div>
+          <div className={styles.inputBox}>
+            <label>Location</label>
+            <input
+              type="text"
+              className={cn(styles.search, styles.secondSearch)}
+              placeholder="Vancouver, Burnaby..."
+            />
+          </div>
           <input type="submit" value="Search" className={styles.submit} />
         </form>
       </section>

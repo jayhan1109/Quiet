@@ -17,28 +17,47 @@
   }
 
   .form {
-    .search {
-      width: 30vw;
-      outline: none;
-      text-decoration: none;
-      font-size: 1.2rem;
-      border: none;
-      padding: 0.7rem 0.5rem 0.7rem 1.7rem;
-      background: $white-color;
-      position: relative;
-      margin-top: 3rem;
-      -webkit-box-shadow: 10px 10px 6px -8px rgba(0, 0, 0, 1);
-      -moz-box-shadow: 10px 10px 6px -8px rgba(0, 0, 0, 1);
-      box-shadow: 10px 10px 6px -8px rgba(0, 0, 0, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
 
-      &:nth-child(2) {
+    .inputBox {
+      position: relative;
+      label {
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        transform: translate(0%, -50%);
+        font-weight: bold;
+        padding-left: 0.5rem;
+        font-size: 1.2rem;
+        color: #555;
+      }
+
+      .search {
+        width: 30vw;
+        outline: none;
+        text-decoration: none;
+        font-size: 1.2rem;
+        border: none;
+        padding: 0.7rem 0.5rem 0.7rem 4.3rem;
+        background: $white-color;
+        position: relative;
+        -webkit-box-shadow: 10px 10px 6px -8px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 10px 10px 6px -8px rgba(0, 0, 0, 1);
+        box-shadow: 10px 10px 6px -8px rgba(0, 0, 0, 1);
+
+        &::placeholder {
+          color: #999;
+        }
+      }
+
+      .secondSearch {
         transform: translateX(-5px);
         border-left: 1px solid #666;
         border-radius: 0px 3px 3px 0px;
-      }
-
-      &::placeholder {
-        color: #999;
+        padding-left: 6.5rem;
       }
     }
     .submit {
@@ -49,6 +68,5 @@
 
 .category {
   .categoryTitle {
-    font-size: 5rem;
   }
 }
