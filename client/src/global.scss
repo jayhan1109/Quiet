@@ -1,5 +1,6 @@
 $white-color: #ffffff;
 $black-color: #000000;
+$brown-color: #765e52;
 
 @mixin whiteBtn {
   color: $black-color;
@@ -26,4 +27,16 @@ $black-color: #000000;
   font-family: "Knewave";
   color: $white-color;
   font-size: 2.5rem;
+}
+
+@mixin rate {
+  color: $white-color;
+  text-align: center;
+  background: $brown-color;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
 }

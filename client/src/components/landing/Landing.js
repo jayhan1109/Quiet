@@ -2,61 +2,51 @@ import React from "react";
 import styles from "./Landing.module.scss";
 import Navbar from "./Navbar";
 import cn from "classnames";
+import Category from "./Category";
 
 const Landing = () => {
+  const {
+    container,
+    jumbotron,
+    title,
+    form,
+    inputBox,
+    search,
+    secondSearch,
+    submit,
+  } = styles;
+
   return (
-    <div className={styles.container}>
+    <div className={container}>
       <nav>
         <Navbar />
       </nav>
-      <section className={styles.jumbotron}>
-        <div className={styles.title}>Quiet</div>
-        <form className={styles.form}>
-          <div className={styles.inputBox}>
+      <section className={jumbotron}>
+        <div className={title}>Quiet</div>
+        <form className={form}>
+          <div className={inputBox}>
             <label>Place</label>
             <input
               type="text"
-              className={styles.search}
+              className={search}
               placeholder="Quiet places..."
             />
           </div>
-          <div className={styles.inputBox}>
+          <div className={inputBox}>
             <label>Location</label>
             <input
               type="text"
-              className={cn(styles.search, styles.secondSearch)}
+              className={cn(search, secondSearch)}
               placeholder="Vancouver, Burnaby..."
             />
           </div>
-          <input type="submit" value="Search" className={styles.submit} />
+          <input type="submit" value="Search" className={submit} />
         </form>
       </section>
-      <section className={styles.category}>
-        <h2 className={styles.categoryTitle}>Popular This Week</h2>
-        <div className={styles.cardContainer}>
-          <div className={styles.card}>
-            <div className={styles.cardImage}></div>
-            <div className={styles.cardContent}>
-              <div className={styles.cardInfo}>
-                <p className={styles.name}>La Poret</p>
-                <p className={styles.address}>4918 Hardwick, Burnaby</p>
-              </div>
-              <div className={styles.cardRating}>
-                <div className={styles.rateDiv}>
-                  <p className={styles.rateName}>QUIET</p>
-                  <div className={styles.rate}>4.2</div>
-                </div>
-                <div className={styles.rateDiv}>
-                  <p className={styles.rateName}>PRICE</p>
-                  <div className={styles.rate}>$$</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>World</div>
-          <div>Good</div>
-        </div>
-      </section>
+      <Category categoryTitle="Popular This Week" />
+      <Category categoryTitle="Popular This Week" />
+      <Category categoryTitle="Popular This Week" />
+      <Category categoryTitle="Popular This Week" />
     </div>
   );
 };
