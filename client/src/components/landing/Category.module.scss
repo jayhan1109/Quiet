@@ -1,0 +1,19 @@
+@import "../../global.scss";
+
+.category {
+  max-width: 90%;
+  margin: 0 auto;
+  margin-bottom: 10rem;
+
+  .title {
+    font-size: 2.5rem;
+    font-family: "Do Hyeon";
+  }
+
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+    height: 300px;
+  }
+}
