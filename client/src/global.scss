@@ -40,3 +40,21 @@ $brown-color: #765e52;
   width: 40px;
   height: 40px;
 }
+
+@mixin mobile {
+  @media (min-width: 0px) and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 500px) and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
