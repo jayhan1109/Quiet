@@ -22,6 +22,11 @@
   width: 600px;
   padding: 5rem 0rem;
 
+  .title {
+    text-align: center;
+    font-size: 3rem;
+  }
+
   .inputs {
     display: flex;
     flex-direction: column;
@@ -50,7 +55,7 @@
       width: 400px;
       margin-top: 1.5rem;
       margin-bottom: 2rem;
-      @include whiteBtn();
+      @include brownBtn();
     }
   }
 

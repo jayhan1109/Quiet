@@ -1,6 +1,6 @@
 $white-color: #ffffff;
 $black-color: #000000;
-$brown-color: #765e52;
+$brown-color: rgb(118, 94, 82);
 
 @mixin whiteBtn {
   color: #333;
@@ -16,6 +16,27 @@ $brown-color: #765e52;
 
   &:hover {
     background-color: #eee;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+@mixin brownBtn {
+  color: $white-color;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: $brown-color;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: rgba(130, 110, 95, 0.9);
   }
 
   &:active {

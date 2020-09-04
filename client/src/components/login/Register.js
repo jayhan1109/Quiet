@@ -12,12 +12,14 @@ const Register = () => {
     bottom,
     input,
     submit,
+    title,
   } = styles;
   return (
     <div className={auth}>
       <Navbar />
       <div className={container}>
         <div className={formContainer}>
+          <h2 className={title}>Register</h2>
           <div className={inputs}>
             <input type="text" placeholder="Username" className={input} />
             <input type="email" placeholder="Email" className={input} />
