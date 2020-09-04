@@ -8,17 +8,16 @@
   align-items: center;
 }
 
-.container_notLanding {
-  background-color: rgba(118, 94, 82, 0.87);
-}
-
 .title {
   height: 100%;
   margin-right: auto;
   display: flex;
   align-items: center;
   margin-left: 3rem;
-  @include desktop-logo;
+
+  a {
+    @include desktop-logo;
+  }
 }
 
 .side {

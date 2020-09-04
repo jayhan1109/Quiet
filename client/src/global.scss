@@ -27,6 +27,9 @@ $brown-color: #765e52;
   font-family: "Knewave";
   color: $white-color;
   font-size: 2.5rem;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @mixin rate {
