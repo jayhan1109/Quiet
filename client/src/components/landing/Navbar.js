@@ -4,15 +4,15 @@ import { Link, useLocation } from "react-router-dom";
 import cn from "classnames";
 
 const Navbar = () => {
-  const [isLoginPage, setIsLoginPage] = useState(false);
+  const [notLanding, setNotLanding] = useState(false);
 
   const {
     container,
-    container_login,
+    container_notLanding,
     title,
-    title_login,
     side,
     search,
+    search_notLanding,
     signin,
   } = styles;
 
@@ -20,16 +20,20 @@ const Navbar = () => {
 
   useEffect(() => {
     if (path === "/login") {
-      setIsLoginPage(true);
+      setNotLanding(true);
     }
   }, [path]);
 
   return (
-    <div className={cn(container, { [container_login]: isLoginPage })}>
-      <div className={cn(title, { [title_login]: isLoginPage })}>QUIET</div>
+    <div className={cn(container, { [container_notLanding]: notLanding })}>
+      <div className={title}>QUIET</div>
       <div className={side}>
         <form>
-          <input type="text" className={search} placeholder="Quiet places..." />
+          <input
+            type="text"
+            className={cn(search, { [search_notLanding]: notLanding })}
+            placeholder="Quiet places..."
+          />
         </form>
         <Link to="/login" className={signin}>
           Sign In

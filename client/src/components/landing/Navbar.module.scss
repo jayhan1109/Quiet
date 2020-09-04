@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.container_login {
+.container_notLanding {
   background-color: rgba(118, 94, 82, 0.87);
 }
 
@@ -19,9 +19,6 @@
   align-items: center;
   margin-left: 3rem;
   @include desktop-logo;
-}
-
-.title_login {
 }
 
 .side {
@@ -45,6 +42,15 @@
 
     &::placeholder {
       color: #999;
+    }
+  }
+
+  .search_notLanding {
+    background-color: $white-color;
+    color: rgba(22, 22, 22, 0.9);
+
+    &::placeholder {
+      color: $brown-color;
     }
   }
 
