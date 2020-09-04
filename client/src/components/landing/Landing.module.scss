@@ -69,3 +69,75 @@
     }
   }
 }
+
+@include tablet {
+  .jumbotron {
+    .title {
+      font-size: 5.5rem;
+    }
+
+    .form {
+      flex-direction: column;
+      min-width: 380px;
+      max-width: 600px;
+      width: 70%;
+
+      .inputBox {
+        width: 100%;
+        margin-bottom: 0.1rem;
+
+        .search {
+          width: 100%;
+        }
+
+        .secondSearch {
+          transform: translateX(0px);
+          border-left: none;
+          border-radius: 3px;
+          padding-left: 6.5rem;
+        }
+      }
+      .submit {
+        @include whiteBtn();
+        width: 100%;
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .jumbotron {
+    height: 70vh;
+
+    .title {
+      font-size: 3rem;
+    }
+
+    .form {
+      flex-direction: column;
+      width: 80%;
+
+      .inputBox {
+        width: 100%;
+        margin-bottom: 0.1rem;
+
+        .search {
+          width: 100%;
+        }
+
+        .secondSearch {
+          transform: translateX(0px);
+          border-left: none;
+          border-radius: 3px;
+          padding-left: 6.5rem;
+        }
+      }
+      .submit {
+        @include whiteBtn();
+        width: 100%;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

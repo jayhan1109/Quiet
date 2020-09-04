@@ -1,9 +1,9 @@
 $white-color: #ffffff;
 $black-color: #000000;
-$brown-color: #765e52;
+$brown-color: rgb(118, 94, 82);
 
 @mixin whiteBtn {
-  color: $black-color;
+  color: #333;
   text-decoration: none;
   outline: none;
   border: none;
@@ -23,10 +23,34 @@ $brown-color: #765e52;
   }
 }
 
+@mixin brownBtn {
+  color: $white-color;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: $brown-color;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: rgba(130, 110, 95, 0.9);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
 @mixin desktop-logo {
   font-family: "Knewave";
   color: $white-color;
   font-size: 2.5rem;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @mixin rate {
@@ -39,4 +63,22 @@ $brown-color: #765e52;
   align-items: center;
   width: 40px;
   height: 40px;
+}
+
+@mixin mobile {
+  @media (min-width: 0px) and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 500px) and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 992px) {
+    @content;
+  }
 }

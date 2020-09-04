@@ -17,3 +17,30 @@
     height: 300px;
   }
 }
+
+@include tablet {
+  .category {
+    .title {
+      font-size: 2rem;
+    }
+
+    .cardContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@include mobile {
+  .category {
+    margin-bottom: 5rem;
+
+    .title {
+      font-size: 1.7rem;
+    }
+
+    .cardContainer {
+      height: 900px;
+      grid-template-columns: repeat(1, 2fr);
+    }
+  }
+}
