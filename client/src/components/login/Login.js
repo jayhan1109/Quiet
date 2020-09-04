@@ -1,7 +1,12 @@
-import React from "react";
+import React, { Fragment } from "react";
+import Navbar from "../landing/Navbar";
 
 const Login = () => {
-  return <div>Login</div>;
+  return (
+    <Fragment>
+      <Navbar />
+    </Fragment>
+  );
 };
 
 export default Login;

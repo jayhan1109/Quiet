@@ -8,6 +8,10 @@
   align-items: center;
 }
 
+.container_login {
+  background-color: rgba(118, 94, 82, 0.87);
+}
+
 .title {
   height: 100%;
   margin-right: auto;
@@ -15,6 +19,9 @@
   align-items: center;
   margin-left: 3rem;
   @include desktop-logo;
+}
+
+.title_login {
 }
 
 .side {
@@ -55,6 +62,9 @@
 }
 
 @include tablet {
+  .container {
+    height: 8vh;
+  }
   .side {
     .search {
       display: none;
@@ -66,6 +76,9 @@
 }
 
 @include mobile {
+  .container {
+    height: 6vh;
+  }
   .title {
     font-size: 2rem;
   }

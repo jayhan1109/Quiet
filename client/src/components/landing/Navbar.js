@@ -1,12 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import cn from "classnames";
 
 const Navbar = () => {
-  const { container, title, side, search, signin } = styles;
+  const [isLoginPage, setIsLoginPage] = useState(false);
+
+  const {
+    container,
+    container_login,
+    title,
+    title_login,
+    side,
+    search,
+    signin,
+  } = styles;
+
+  const path = useLocation().pathname;
+
+  useEffect(() => {
+    if (path === "/login") {
+      setIsLoginPage(true);
+    }
+  }, [path]);
+
   return (
-    <div className={container}>
-      <div className={title}>QUIET</div>
+    <div className={cn(container, { [container_login]: isLoginPage })}>
+      <div className={cn(title, { [title_login]: isLoginPage })}>QUIET</div>
       <div className={side}>
         <form>
           <input type="text" className={search} placeholder="Quiet places..." />
