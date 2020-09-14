@@ -3,7 +3,7 @@ import Navbar from "../landing/Navbar";
 import styles from "./Auth.module.scss";
 import { Link } from "react-router-dom";
 
-const Login = () => {
+const Register = () => {
   const {
     auth,
     formContainer,
@@ -19,15 +19,20 @@ const Login = () => {
       <Navbar />
       <div className={container}>
         <div className={formContainer}>
-          <h2 className={title}>Login</h2>
+          <h2 className={title}>Register</h2>
           <div className={inputs}>
+            <input type="text" placeholder="Username" className={input} />
             <input type="email" placeholder="Email" className={input} />
             <input type="password" placeholder="Password" className={input} />
-
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              className={input}
+            />
             <input type="submit" className={submit} />
           </div>
           <p className={bottom}>
-            Don't have an account? <Link to="/register">Sign Up</Link>
+            Already have an account? <Link to="/login">Sign In</Link>
           </p>
         </div>
       </div>
@@ -35,4 +40,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

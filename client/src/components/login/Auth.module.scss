@@ -1,0 +1,76 @@
+@import "../../global.scss";
+
+.auth {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(90, 90, 90, 0.5), rgba(90, 90, 90, 0.5)),
+    url("../../assets/img/login_bg.png") no-repeat center center/cover;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $white-color;
+}
+
+.formContainer {
+  background-color: rgba(22, 22, 22, 0.9);
+  width: 600px;
+  padding: 5rem 0rem;
+
+  .title {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .input {
+      max-width: 400px;
+      width: 400px;
+      outline: none;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border: none;
+      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+      background-color: inherit;
+      color: $white-color;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid white;
+
+      &::placeholder {
+        color: $white-color;
+      }
+    }
+
+    .submit {
+      width: 400px;
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+      @include brownBtn();
+    }
+  }
+
+  .bottom {
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: "Roboto";
+
+    a {
+      outline: none;
+      text-decoration: none;
+      cursor: pointer;
+      color: $white-color;
+      font-weight: bold;
+      margin-left: 0.5rem;
+    }
+  }
+}
