@@ -3,6 +3,7 @@ const authRouter = require("./routes/auth/auth");
 
 // Connect Express
 const app = express();
+const port = 5000;
 
 // Middleware
 app.use(express.json({ extended: false }));
@@ -13,4 +14,4 @@ app.use(express.json({ extended: false }));
 app.use("/auth", authRouter);
 
 // Server ON
-app.listen(process.env.PORT || 5000, () => console.log(`Server is On`));
+app.listen(process.env.PORT || port, () => console.log(`Server is On ${port}`));
